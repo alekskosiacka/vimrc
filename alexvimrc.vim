@@ -29,7 +29,7 @@ set history=500
 
 " Turn on the WiLd menu
 set wildmenu
-
+set number
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
