@@ -1,15 +1,32 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Alex VIMRC - mainly to make python less annoying. :D
 
-Alex VIMRC - mainly to make python less annoying. :D
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+" then do following to install plugins
+":PluginInstall
 
 " Sets how many lines of history VIM has to remember
 set history=500
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Turn on the WiLd menu
 set wildmenu
 
@@ -34,9 +51,9 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Enable syntax highlighting
 syntax enable 
 
@@ -47,9 +64,9 @@ endtry
 
 set background=dark
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 "Python PEP8 indentation
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
